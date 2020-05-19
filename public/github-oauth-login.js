@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>krakerjak.io/index.html at master · brentrealbt/krakerjak.io</title>
+  <title>krakerjak.io/github-oauth-login.js at master · brentrealbt/krakerjak.io</title>
     <meta name="description" content="Use a Cloudflare worker for GitHub&#39;s OAuth login flow - brentrealbt/krakerjak.io">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars1.githubusercontent.com/u/8030678?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="brentrealbt/krakerjak.io" /><meta property="og:url" content="https://github.com/brentrealbt/krakerjak.io" /><meta property="og:description" content="Use a Cloudflare worker for GitHub&#39;s OAuth login flow - brentrealbt/krakerjak.io" />
 
   <link rel="assets" href="https://github.githubassets.com/">
-    <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTM2MzU4NTUxOjQ0MjBhZmMyZDBmMGUwMmVlNTI3Zjc5ZTFjYWEzNzlkYmRiMmFiYjRiNWRkYmRjMjVmNjIwMWQyZjBjZjQ4MjU=--93c8b44cdd8282736e5f98c0e86cafecb49572b8">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTM2MzU4NTUxOmY0MTYxNDdiNDU0OWMyODMwOTg0ZWYwYzQ4YzE1YWI3MTE5YWExNzZiOGI0Yjk2OWY3MjI3MGIyYmFmZTI4ZDM=--c9e947bd928a3a99f41423aa9edb595bbf2070bb">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="EC29:54B3:196220:29D767:5EC362C5" data-pjax-transient="true" /><meta name="html-safe-nonce" content="53a93eef464663db46ff146867df0d54e12b976a" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9icmVudHJlYWxidC9rcmFrZXJqYWsuaW8iLCJyZXF1ZXN0X2lkIjoiRUMyOTo1NEIzOjE5NjIyMDoyOUQ3Njc6NUVDMzYyQzUiLCJ2aXNpdG9yX2lkIjoiODUzMjc0ODMyMDkxODk5OTI5IiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="f19e7ffe820b6da3d9926db3a01dac82f30c8234599e3e439bf16e488bc7045e" data-pjax-transient="true" />
+  <meta name="request-id" content="EC29:54B3:196386:29D78F:5EC362C5" data-pjax-transient="true" /><meta name="html-safe-nonce" content="53a93eef464663db46ff146867df0d54e12b976a" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9icmVudHJlYWxidC9rcmFrZXJqYWsuaW8iLCJyZXF1ZXN0X2lkIjoiRUMyOTo1NEIzOjE5NjM4NjoyOUQ3OEY6NUVDMzYyQzUiLCJ2aXNpdG9yX2lkIjoiODUzMjc0ODMyMDkxODk5OTI5IiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="07e70f81ea43be318bc86aefebae25790e1554eb01235136c5aad9fde2884efd" data-pjax-transient="true" />
 
 
 
@@ -77,7 +77,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="ZTllYWExNjljMmYwMGI5ZTcxNzI1Yzc1ZTRiYjQzMDJhMzlhMTY2MTM3NGNjODU4YzQ3YzJiMTkxNjg3MGRlZnx7InJlbW90ZV9hZGRyZXNzIjoiNjkuMTU2LjEwNy4xMTEiLCJyZXF1ZXN0X2lkIjoiRUMyOTo1NEIzOjE5NjIyMDoyOUQ3Njc6NUVDMzYyQzUiLCJ0aW1lc3RhbXAiOjE1ODk4NjMxMDksImhvc3QiOiJnaXRodWIuY29tIn0=">
+      <meta name="js-proxy-site-detection-payload" content="MTdiMjc2OWE0NDA2YWRjZjZmYWI4NzFiMmU2NzM5Nzc5ZmU5NDAyMDk1MzU4OTE3YzIxZjgwZDVmZWJjMzk2Ynx7InJlbW90ZV9hZGRyZXNzIjoiNjkuMTU2LjEwNy4xMTEiLCJyZXF1ZXN0X2lkIjoiRUMyOTo1NEIzOjE5NjM4NjoyOUQ3OEY6NUVDMzYyQzUiLCJ0aW1lc3RhbXAiOjE1ODk4NjMxMTksImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,PAGE_STALE_CHECK,JS_CHUNKING">
 
@@ -91,7 +91,7 @@
   <meta name="octolytics-dimension-user_id" content="8030678" /><meta name="octolytics-dimension-user_login" content="brentrealbt" /><meta name="octolytics-dimension-repository_id" content="244273202" /><meta name="octolytics-dimension-repository_nwo" content="brentrealbt/krakerjak.io" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="true" /><meta name="octolytics-dimension-repository_parent_id" content="205192828" /><meta name="octolytics-dimension-repository_parent_nwo" content="gr2m/cloudflare-worker-github-oauth-login" /><meta name="octolytics-dimension-repository_network_root_id" content="205192828" /><meta name="octolytics-dimension-repository_network_root_nwo" content="gr2m/cloudflare-worker-github-oauth-login" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="true" />
 
 
-    <link rel="canonical" href="https://github.com/brentrealbt/krakerjak.io/blob/master/index.html" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -165,7 +165,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" value="rNZcz3/zxRfw8M/NvBeBr0+8yKuNQLYdMMkPaAnIyWhRXLl4PqkUkF0IK/WCY12NdT9s65eOIcR8eSgQIWNZQA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="Ks3QrxBEwqZ6i9J9tLC0pB6Z4pwGANSaBQCsvaeQ/cvXRzUYUR4TIddzNkWKxGiGJBpG3BzOQ0NJsIvFjztt4w==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -316,7 +316,7 @@
       <img class="avatar avatar-user" src="https://avatars3.githubusercontent.com/u/8030678?s=40&amp;v=4" width="20" height="20" alt="@brentrealbt" />
       brentrealbt
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ExatSWbqskC/10njYKQB7JNAjxtTBWdDwdZwkoPo8D939nfirhcVFTMMFB3OW6JIDNawtefMLftiOCJjLjZAuw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ltRHmGuybRC7RlW/zIpzTF2HNFYwzT9mxFNCbs3hAXnyNJ0zo0/KRTedCEFiddDowhEL+IQEdd5nvRCfYD+x/Q==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-3 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 17" version="1.1" width="16" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"></path></svg>
         Sign out
@@ -409,7 +409,7 @@
   " data-team-hovercards-enabled>
   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
     <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
-      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:8030678,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:8030678,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;}}" data-hydro-click-hmac="570663ebe86c13b5cacf22ac15d5f609a3799be0e37c3f3f8c3fb5a030aa2684">
+      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:8030678,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:8030678,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;}}" data-hydro-click-hmac="ddb5a969a3f7f981cfc7ff8eb0818dc45055ea4437b92aa376e27c66e9f8e05d">
       <div class="d-flex">
         <div class="f6 lh-condensed user-status-header
           d-inline-block v-align-middle
@@ -436,7 +436,7 @@
       </div>
     </summary>
     <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="0Hr4KhjelSuz5R64oqASW4nCZTa6E3IP5aUpPvgIkampHMT0P7cP4617foEIKOXX9xMrObM0/sRYEauLZE7wlw==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="MFe+VuAndyGqEbfmV4B8cP7m9XNAG9hjUqqd1F8T4rJJMYKIx07t6bSP19/9CIv8gDe7fEk8VKjvHh9hw1WDjA==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
@@ -554,17 +554,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-05-19T01:08:29-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-05-19T01:08:39-04:00">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-05-19T01:38:29-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-05-19T01:38:39-04:00">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-05-19T04:38:29-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-05-19T04:38:39-04:00">
             in 4 hours
           </button>
         </li>
@@ -621,10 +621,10 @@
     class="dropdown-item btn-link"
     role="menuitem"
     data-feature-preview-trigger-url="/users/brentrealbt/feature_previews"
-    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}"
-    data-feature-preview-close-hmac="53d322f42c7e93bfb6d4e236d24a32f14de41a7b78acf5d2784f6987d547878f"
-    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}"
-    data-hydro-click-hmac="5a83110fa663f8e140da19dc685e305d659cc5db8e41af38ce3c5a0040670296"
+    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}"
+    data-feature-preview-close-hmac="3f5a70c04dbcccad8e0f7b3a44932ade1a2bf4101b7c4ffb357f4e8b0f84ae84"
+    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}"
+    data-hydro-click-hmac="2fe0364ac30ccd6123344ea29730b7bbccf9b5163fcb6269e5410ea5699a7f3e"
   >
     Feature preview
   </button>
@@ -633,12 +633,12 @@
 
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7vXR+qn0FrStjyd7ZCtKarK22huzy9P2I1yuX6iwF0OKFQtRYQmx4SFUeoXK1OnOLSDltQcCmU6AsvyuBW6nxw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="uZp1ImC0GTI2Fr2cnB+ynl98mfLRa/mZ5I3UMK5vPsjdeq+JqEm+Z7rN4GIy4BE6wOqmXGWisyFHY4bBA7GOTA==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
       </button>
-      <input type="text" name="required_field_611b" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1589863109413" class="form-control" /><input type="hidden" name="timestamp_secret" value="e6deb71b81bafc2d98d7b4a252c256237b2cfe4b87899913e19272603b8367ab" class="form-control" />
+      <input type="text" name="required_field_d648" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1589863119082" class="form-control" /><input type="hidden" name="timestamp_secret" value="48ea3f270a0d0a39d32d5cdc1d8e9ce054b74d70703fd6314221e1f779290f14" class="form-control" />
 </form>  </details-menu>
 </details>
 
@@ -729,10 +729,10 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="B25hUCAbN3mjRpGj58HwixXx+1hmdxYb2lPPXxHbU6JTzl6GxJ4eqddf/OmFM6q5BWihfGnCwNAT9Se7jZDWLg==" />      <input type="hidden" name="repository_id" value="244273202">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="LNlwaB4lbXtLT95lbKZERBwggc55lJ/NR6eD2ypof/14eU+++qBEqz9Wsy8OVB52DLnb6nYhSQaOAWs/tiP6cQ==" />      <input type="hidden" name="repository_id" value="244273202">
 
       <details class="details-reset details-overlay select-menu float-left">
-        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="cd03e456ba07c737789d2f07127ff0d6e90d6d5135efe700715bee7adf6eca73" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="280b460476ca78bcf0c234c4b88a00d922692f4adc3384456f35756094e5f3b6" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
               <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
               Watch
           </span>
@@ -803,9 +803,9 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/brentrealbt/krakerjak.io/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="OHI1t+ITEaVxyMz2hy3U7T0bgnnqhRZGL0wrAVbbCeHXC1Am2s1/EeAy7r1ZnESjZY2FwLtI35M6hEzvjfiFpg==" />
+    <form class="starred js-social-form" action="/brentrealbt/krakerjak.io/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="c2nMP0vQr4qnk7gN4H2yFmRcHXTz57HrnYAC2WZTvXCcEKmucw7BPjZpmkY+zCJYPMoazaIqeD6ISGU3vXAxNw==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar brentrealbt/krakerjak.io" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="6fc55dc42c5019eac7f45199cd13248073ab86f5de1e568a679166441765a1d2" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar brentrealbt/krakerjak.io" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="e8f472e63e6ce7b26a177d6fc19e7f8574d303a49d9286c54aeaf1e867c21360" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
         Unstar
 </button>        <a class="social-count js-social-count" href="/brentrealbt/krakerjak.io/stargazers"
@@ -813,9 +813,9 @@
            0
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/brentrealbt/krakerjak.io/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="vam6qeLc3IZVm1GINypF7DuBc5pvGsP8SRE3yrDzCThES12ByGQI1Kv4jBhBgLjGqZm/Xng0UTJ8dIeAI6HamQ==" />
+    <form class="unstarred js-social-form" action="/brentrealbt/krakerjak.io/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="gqJSA7KLYUCfsptIakQngB+H9Z2XTAdhaMlsqeXymaZ7QLUrmDO1EmHRRtgc7tqqjZ85WYBila9drNzjdqBKBw==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star brentrealbt/krakerjak.io" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="d59a8546512dd80046d11f53ce1f92c504a0cc60b160f687b269e103984dc6bb" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star brentrealbt/krakerjak.io" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="d126d2290d48c30ee030f867b4e8ed07a12cfebb002cab42cb2b67b9cdc1d78a" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
         Star
 </button>        <a class="social-count js-social-count" href="/brentrealbt/krakerjak.io/stargazers"
@@ -832,7 +832,7 @@
                     <summary
                   class="btn btn-sm btn-with-count"
                   title="Fork your own copy of brentrealbt/krakerjak.io to your account"
-                  data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/index.html&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="b11259b39440c5933393f762df167d0139f2643cef6e1101e00296f7af74ac8d" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork">
+                  data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:244273202,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="a7998fed1cb7547c3494e0933c0174c89d93af0ebe571d836e9b248e5f608ef1" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork">
                   <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
                   Fork
                 </summary>
@@ -994,9 +994,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/brentrealbt/krakerjak.io/blob/8c16ad39bc39011cfb02d8f006015b4b986d8fee/index.html">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/brentrealbt/krakerjak.io/blob/8c16ad39bc39011cfb02d8f006015b4b986d8fee/github-oauth-login.js">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:116a66e8a5d2d601e2ef642066e1e9a2 -->
+    <!-- blob contrib key: blob_contributors:v22:0663a570a02c9bfdfd531d639e2ebbac -->
     
 
     <div class="d-flex flex-items-start flex-shrink-0 flex-column flex-md-row pb-3">
@@ -1011,7 +1011,7 @@
     <span class="dropdown-caret"></span>
   </summary>
 
-  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/brentrealbt/krakerjak.io/refs/master/index.html?source_action=show&amp;source_controller=blob" preload>
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/brentrealbt/krakerjak.io/refs/master/github-oauth-login.js?source_action=show&amp;source_controller=blob" preload>
     <div class="SelectMenu-modal">
       <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
         <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
@@ -1027,13 +1027,46 @@
                 data-hotkey="t">
             Find file
           </a>
-          <clipboard-copy value="index.html" class="btn btn-sm BtnGroup-item">
+          <clipboard-copy value="github-oauth-login.js" class="btn btn-sm BtnGroup-item">
             Copy path
           </clipboard-copy>
         </div>
       </span>
       <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/brentrealbt/krakerjak.io"><span>krakerjak.io</span></a></span></span><span class="separator">/</span><strong class="final-path">index.html</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/brentrealbt/krakerjak.io"><span>krakerjak.io</span></a></span></span><span class="separator">/</span><strong class="final-path">github-oauth-login.js</strong>
+          <span class="separator">/</span><details class="details-reset details-overlay d-inline" id="jumpto-symbol-select-menu">
+  <summary class="btn-link link-gray css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:244273202,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}" data-hydro-click-hmac="1c7208157a0f4fc94cee4d380853422e1be792a9bd7f4ac1e619a78b936af17a">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+    <span data-menu-button>Jump to</span>
+    <span class="dropdown-caret"></span>
+  </summary>
+  <details-menu class="SelectMenu SelectMenu--hasFilter" role="menu">
+    <div class="SelectMenu-modal">
+      <header class="SelectMenu-header">
+        <span class="SelectMenu-title">Code definitions</span>
+        <button class="SelectMenu-closeButton" type="button" data-toggle-for="jumpto-symbol-select-menu">
+          <svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+        </button>
+      </header>
+      <div class="SelectMenu-list">
+          <div class="SelectMenu-blankslate">
+            <p class="mb-0 text-gray">
+              No definitions found in this file.
+            </p>
+          </div>
+        <div data-filterable-for="jumpto-symbols-filter-field" data-filterable-type="substring">
+        </div>
+      </div>
+      <footer class="SelectMenu-footer">
+        <div class="d-flex flex-justify-between">
+          Code navigation not available for this commit
+          <svg class="octicon octicon-primitive-dot text-light-gray" viewBox="0 0 8 16" version="1.1" width="8" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path></svg>
+        </div>
+      </footer>
+    </div>
+  </details-menu>
+</details>
+
       </h2>
 
       <div class="BtnGroup flex-shrink-0 d-none d-md-inline-block">
@@ -1043,7 +1076,7 @@
               data-hotkey="t">
           Find file
         </a>
-        <clipboard-copy value="index.html" class="btn btn-sm BtnGroup-item">
+        <clipboard-copy value="github-oauth-login.js" class="btn btn-sm BtnGroup-item">
           Copy path
         </clipboard-copy>
       </div>
@@ -1051,7 +1084,7 @@
 
 
 
-    <include-fragment src="/brentrealbt/krakerjak.io/contributors/master/index.html" class="Box Box--condensed commit-loader">
+    <include-fragment src="/brentrealbt/krakerjak.io/contributors/master/github-oauth-login.js" class="Box Box--condensed commit-loader">
       <div class="Box-body bg-blue-light f6">
         Fetching contributors&hellip;
       </div>
@@ -1072,36 +1105,36 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 
-      125 lines (115 sloc)
+      63 lines (56 sloc)
       <span class="file-info-divider"></span>
-    3.68 KB
+    1.68 KB
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/brentrealbt/krakerjak.io/raw/master/index.html">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/brentrealbt/krakerjak.io/blame/master/index.html">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/brentrealbt/krakerjak.io/commits/master/index.html">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/brentrealbt/krakerjak.io/raw/master/github-oauth-login.js">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/brentrealbt/krakerjak.io/blame/master/github-oauth-login.js">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/brentrealbt/krakerjak.io/commits/master/github-oauth-login.js">History</a>
     </div>
 
 
     <div>
           <a class="btn-octicon tooltipped tooltipped-nw js-remove-unless-platform"
              data-platforms="windows,mac"
-             href="x-github-client://openRepo/https://github.com/brentrealbt/krakerjak.io?branch=master&amp;filepath=index.html"
+             href="x-github-client://openRepo/https://github.com/brentrealbt/krakerjak.io?branch=master&amp;filepath=github-oauth-login.js"
              aria-label="Open this file in GitHub Desktop"
              data-ga-click="Repository, open with desktop">
               <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
           </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/brentrealbt/krakerjak.io/edit/master/index.html" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7DvatZJ2Yeb+9RSOcks3n6sbZmOYZqBDDOZHHQ1X8fG5p58WcWmuk6wO2jFZhGKU5+J4lFUpv9VA9wCjdoxKRg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/brentrealbt/krakerjak.io/edit/master/github-oauth-login.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="hsc8rj4RqmjMSiDMA3ZWzXwMNr51sh7DPTXlZW0VwVeD9H6w4roBGl1IKmUkCjbFVfYwIV+9+vaiGMRqtkH3Ug==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit this file" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 011.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
             </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/brentrealbt/krakerjak.io/delete/master/index.html" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="2PQs18BeTS2zdOxJKtv6ByKvFKW8uArPzzlkuK3JmbbsMP1bgH34bviakecF3LhcxUz3SXpTvxvxgw3rd88FMw==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/brentrealbt/krakerjak.io/delete/master/github-oauth-login.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="J7dcmh3HPILhqbf0QUAWSjhG8dFBVks4vPBUVQ51LWVQrnqgBckAQMqQBJKA2Oz+vafyKUxLDyTCJJR/4zWoUw==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Delete this file" data-disable-with>
               <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
@@ -1111,199 +1144,222 @@
 </div>
 
 
+        <div class="js-notice border-bottom p-2">
+          <div class="d-flex rounded-1 code-navigation-banner">
+            <div class="col-6 pt-4 pl-4 pb-4">
+              <div class="d-flex flex-items-center f6">
+                <h3 class="mr-2">Code navigation is available!</h3>
+              </div>
+              <p class="text-gray pt-2">
+                Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository.
+                <a href="https://help.github.com/en/articles/navigating-code-on-github">Learn more</a>
+              </p>
+            </div>
+            <div class="col-6 p-2 text-right code-navigation-banner-illo">
+              <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-notice-dismiss" action="/settings/dismiss-notice/aleph_code_navigation_banner" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="pEdLt4rl4OMc/aFkv3pGL5gI8X70DGUEMYVuSCokzgznOJAdQ+KvHcELSWUOSUgj4eGsxdD2UaMgyM6snSLcVQ==" />
+                <button name="button" type="submit" class="btn-link link-gray" aria-label="Dismiss">
+                  <svg width="20" height="20" class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+</button></form>            </div>
+          </div>
+        </div>
 
       
 
-  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html ">
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript ">
       
 <table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip>
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-c1>&lt;!DOCTYPE html<span class=pl-kos>&gt;</span></span></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-en>addEventListener</span><span class=pl-kos>(</span><span class=pl-s>&quot;fetch&quot;</span><span class=pl-kos>,</span> <span class=pl-s1>event</span> <span class=pl-c1>=&gt;</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>html</span> <span class=pl-c1>lang</span>=&quot;<span class=pl-s>en</span>&quot;<span class=pl-kos>&gt;</span></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-s1>event</span><span class=pl-kos>.</span><span class=pl-en>respondWith</span><span class=pl-kos>(</span><span class=pl-en>handle</span><span class=pl-kos>(</span><span class=pl-s1>event</span><span class=pl-kos>.</span><span class=pl-c1>request</span><span class=pl-kos>)</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>head</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>meta</span> <span class=pl-c1>charset</span>=&quot;<span class=pl-s>UTF-8</span>&quot; /&gt;</td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>meta</span> <span class=pl-c1>name</span>=&quot;<span class=pl-s>viewport</span>&quot; <span class=pl-c1>content</span>=&quot;<span class=pl-s>width=device-width, initial-scale=1.0</span>&quot; /&gt;</td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// Note: Cloudflare workers do not support access to environment variables.</span></td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>meta</span> <span class=pl-c1>http-equiv</span>=&quot;<span class=pl-s>X-UA-Compatible</span>&quot; <span class=pl-c1>content</span>=&quot;<span class=pl-s>ie=edge</span>&quot; /&gt;</td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class=pl-c>// The process.env.* variables are being replaced before deployment using github actions</span></td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>title</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class=pl-k>const</span> <span class=pl-s1>client_id</span> <span class=pl-c1>=</span> <span class=pl-s1>process</span><span class=pl-kos>.</span><span class=pl-c1>env</span><span class=pl-kos>.</span><span class=pl-c1>CLIENT_ID</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line">      Login with GitHub – A Cloudflare Worker + GitHub Pages Login Example</td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class=pl-k>const</span> <span class=pl-s1>client_secret</span> <span class=pl-c1>=</span> <span class=pl-s1>process</span><span class=pl-kos>.</span><span class=pl-c1>env</span><span class=pl-kos>.</span><span class=pl-c1>CLIENT_SECRET</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>title</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>style</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class=pl-k>async</span> <span class=pl-k>function</span> <span class=pl-en>handle</span><span class=pl-kos>(</span><span class=pl-s1>request</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">      <span class=pl-ent><span class=pl-c1>*</span></span> {</td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">  <span class=pl-c>// handle CORS pre-flight request</span></td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>font-family</span>: Consolas<span class=pl-kos>,</span> Monaco<span class=pl-kos>,</span> <span class=pl-s>&quot;Andale Mono&quot;</span><span class=pl-kos>,</span> <span class=pl-s>&quot;Ubuntu Mono&quot;</span><span class=pl-kos>,</span> monospace;</td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>request</span><span class=pl-kos>.</span><span class=pl-c1>method</span> <span class=pl-c1>===</span> <span class=pl-s>&quot;OPTIONS&quot;</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>text-align</span>: center;</td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-k>new</span> <span class=pl-v>Response</span><span class=pl-kos>(</span>null<span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line">      }</td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>headers</span>: <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line">      <span class=pl-ent>h1</span> <span class=pl-ent>small</span> {</td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">        <span class=pl-s>&quot;Access-Control-Allow-Origin&quot;</span>: <span class=pl-s>&quot;*&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>display</span>: block;</td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">        <span class=pl-s>&quot;Access-Control-Allow-Methods&quot;</span>: <span class=pl-s>&quot;GET, POST, OPTIONS&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>font-size</span>: <span class=pl-c1>1<span class=pl-smi>rem</span></span>;</td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">        <span class=pl-s>&quot;Access-Control-Allow-Headers&quot;</span>: <span class=pl-s>&quot;Content-Type&quot;</span></td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">      }</td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">      <span class=pl-ent>h2</span> {</td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>margin-top</span>: <span class=pl-c1>10<span class=pl-smi>rem</span></span>;</td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">      }</td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">      <span class=pl-ent>p</span> {</td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">  <span class=pl-c>// redirect GET requests to the OAuth login page on github.com</span></td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>display</span>: none;</td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>request</span><span class=pl-kos>.</span><span class=pl-c1>method</span> <span class=pl-c1>===</span> <span class=pl-s>&quot;GET&quot;</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">      }</td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-v>Response</span><span class=pl-kos>.</span><span class=pl-en>redirect</span><span class=pl-kos>(</span></td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">      [<span class=pl-c1>data-state</span><span class=pl-c1>=</span><span class=pl-s>&quot;signed-out&quot;</span>] <span class=pl-kos>#</span><span class=pl-c1>signed-out</span><span class=pl-kos>,</span></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">      <span class=pl-s>`https://github.com/login/oauth/authorize?client_id=<span class=pl-s1><span class=pl-kos>${</span><span class=pl-s1>client_id</span><span class=pl-kos>}</span></span>`</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line">      [<span class=pl-c1>data-state</span><span class=pl-c1>=</span><span class=pl-s>&quot;signed-in&quot;</span>] <span class=pl-kos>#</span><span class=pl-c1>signed-in</span><span class=pl-kos>,</span></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>302</span></td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line">      [<span class=pl-c1>data-state</span><span class=pl-c1>=</span><span class=pl-s>&quot;loading&quot;</span>] <span class=pl-kos>#</span><span class=pl-c1>loading</span> {</td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>display</span>: block;</td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">      }</td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>style</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>try</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>head</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>const</span> <span class=pl-kos>{</span> code <span class=pl-kos>}</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-s1>request</span><span class=pl-kos>.</span><span class=pl-en>json</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>body</span> <span class=pl-c1>data-state</span>=&quot;<span class=pl-s>signed-out</span>&quot;<span class=pl-kos>&gt;</span></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>h1</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>const</span> <span class=pl-s1>response</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-en>fetch</span><span class=pl-kos>(</span></td>
       </tr>
       <tr>
         <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line">      Login with GitHub</td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">      <span class=pl-s>&quot;https://github.com/login/oauth/access_token&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>small</span><span class=pl-kos>&gt;</span>A Cloudflare Worker + GitHub Pages Login Example<span class=pl-kos>&lt;/</span><span class=pl-ent>small</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>h1</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>method</span>: <span class=pl-s>&quot;POST&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>p</span> <span class=pl-c1>id</span>=&quot;<span class=pl-s>signed-out</span>&quot;<span class=pl-kos>&gt;</span></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>headers</span>: <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>href</span>=&quot;<span class=pl-s>https://github-oauth-login.gr2m.workers.dev</span>&quot;</td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">          <span class=pl-s>&quot;content-type&quot;</span>: <span class=pl-s>&quot;application/json&quot;</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&gt;</span>Login with GitHub<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">          <span class=pl-c1>accept</span>: <span class=pl-s>&quot;application/json&quot;</span></td>
       </tr>
       <tr>
         <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
-        <td id="LC40" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&gt;</span></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">        <span class=pl-c1>body</span>: <span class=pl-c1>JSON</span><span class=pl-kos>.</span><span class=pl-en>stringify</span><span class=pl-kos>(</span><span class=pl-kos>{</span> client_id<span class=pl-kos>,</span> client_secret<span class=pl-kos>,</span> code <span class=pl-kos>}</span><span class=pl-kos>)</span></td>
       </tr>
       <tr>
         <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
-        <td id="LC42" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>p</span> <span class=pl-c1>id</span>=&quot;<span class=pl-s>signed-in</span>&quot;<span class=pl-kos>&gt;</span></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">      Hello there, <span class=pl-kos>&lt;</span><span class=pl-ent>span</span> <span class=pl-c1>id</span>=&quot;<span class=pl-s>login</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>span</span><span class=pl-kos>&gt;</span>. (<span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>href</span>=&quot;<span class=pl-s>.</span>&quot;<span class=pl-kos>&gt;</span>Logout<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span><span class=pl-kos>&gt;</span>)</td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>const</span> <span class=pl-s1>result</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-s1>response</span><span class=pl-kos>.</span><span class=pl-en>json</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>p</span> <span class=pl-c1>id</span>=&quot;<span class=pl-s>loading</span>&quot;<span class=pl-kos>&gt;</span></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>const</span> <span class=pl-s1>headers</span> <span class=pl-c1>=</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
-        <td id="LC46" class="blob-code blob-code-inner js-file-line">      Loading...</td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">      <span class=pl-s>&quot;Access-Control-Allow-Origin&quot;</span>: <span class=pl-s>&quot;*&quot;</span></td>
       </tr>
       <tr>
         <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
-        <td id="LC47" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
@@ -1312,320 +1368,64 @@
       </tr>
       <tr>
         <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
-        <td id="LC49" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>result</span><span class=pl-kos>.</span><span class=pl-c1>error</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
-        <td id="LC50" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>const</span> <span class=pl-c1>WORKER_URL</span> <span class=pl-c1>=</span> <span class=pl-s>&quot;https://github-oauth-login.gr2m.workers.dev&quot;</span><span class=pl-kos>;</span></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>return</span> <span class=pl-k>new</span> <span class=pl-v>Response</span><span class=pl-kos>(</span><span class=pl-c1>JSON</span><span class=pl-kos>.</span><span class=pl-en>stringify</span><span class=pl-kos>(</span><span class=pl-s1>result</span><span class=pl-kos>)</span><span class=pl-kos>,</span> <span class=pl-kos>{</span> <span class=pl-c1>status</span>: <span class=pl-c1>401</span><span class=pl-kos>,</span> headers <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
-        <td id="LC51" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>const</span> <span class=pl-s1>code</span> <span class=pl-c1>=</span> <span class=pl-k>new</span> <span class=pl-c1>URL</span><span class=pl-kos>(</span><span class=pl-s1>location</span><span class=pl-kos>.</span><span class=pl-c1>href</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-c1>searchParams</span><span class=pl-kos>.</span><span class=pl-en>get</span><span class=pl-kos>(</span><span class=pl-s>&quot;code&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
-        <td id="LC52" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>const</span> <span class=pl-s1>$login</span> <span class=pl-c1>=</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>querySelector</span><span class=pl-kos>(</span><span class=pl-s>&quot;#login&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
-        <td id="LC53" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-k>new</span> <span class=pl-v>Response</span><span class=pl-kos>(</span><span class=pl-c1>JSON</span><span class=pl-kos>.</span><span class=pl-en>stringify</span><span class=pl-kos>(</span><span class=pl-kos>{</span> <span class=pl-c1>token</span>: <span class=pl-s1>result</span><span class=pl-kos>.</span><span class=pl-c1>access_token</span> <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
-        <td id="LC54" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>code</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>status</span>: <span class=pl-c1>201</span><span class=pl-kos>,</span></td>
       </tr>
       <tr>
         <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">        <span class=pl-en>login</span><span class=pl-kos>(</span><span class=pl-s1>code</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">      headers</td>
       </tr>
       <tr>
         <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>}</span></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
-        <td id="LC57" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>}</span> <span class=pl-k>catch</span> <span class=pl-kos>(</span><span class=pl-s1>error</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
-        <td id="LC58" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>async</span> <span class=pl-k>function</span> <span class=pl-en>login</span><span class=pl-kos>(</span><span class=pl-s1>code</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">    <span class=pl-smi>console</span><span class=pl-kos>.</span><span class=pl-en>error</span><span class=pl-kos>(</span><span class=pl-s1>error</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
-        <td id="LC59" class="blob-code blob-code-inner js-file-line">        <span class=pl-c>// remove ?code=... from URL</span></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-k>new</span> <span class=pl-v>Response</span><span class=pl-kos>(</span><span class=pl-s1>error</span><span class=pl-kos>.</span><span class=pl-c1>message</span><span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
       </tr>
       <tr>
         <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
-        <td id="LC60" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>const</span> <span class=pl-s1>path</span> <span class=pl-c1>=</span></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>status</span>: <span class=pl-c1>500</span></td>
       </tr>
       <tr>
         <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
-        <td id="LC61" class="blob-code blob-code-inner js-file-line">          <span class=pl-s1>location</span><span class=pl-kos>.</span><span class=pl-c1>pathname</span> <span class=pl-c1>+</span></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
       </tr>
       <tr>
         <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
-        <td id="LC62" class="blob-code blob-code-inner js-file-line">          <span class=pl-s1>location</span><span class=pl-kos>.</span><span class=pl-c1>search</span><span class=pl-kos>.</span><span class=pl-en>replace</span><span class=pl-kos>(</span><span class=pl-pds>/<span class=pl-cce>\b</span>code=<span class=pl-cce>\w</span><span class=pl-c1>+</span>/</span><span class=pl-kos>,</span> <span class=pl-s>&quot;&quot;</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>replace</span><span class=pl-kos>(</span><span class=pl-pds>/<span class=pl-cce>\?</span><span class=pl-cce>$</span>/</span><span class=pl-kos>,</span> <span class=pl-s>&quot;&quot;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>}</span></td>
       </tr>
       <tr>
         <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
-        <td id="LC63" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>history</span><span class=pl-kos>.</span><span class=pl-en>pushState</span><span class=pl-kos>(</span><span class=pl-kos>{</span><span class=pl-kos>}</span><span class=pl-kos>,</span> <span class=pl-s>&quot;&quot;</span><span class=pl-kos>,</span> <span class=pl-s1>path</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
-        <td id="LC64" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
-        <td id="LC65" class="blob-code blob-code-inner js-file-line">        <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-c1>body</span><span class=pl-kos>.</span><span class=pl-c1>dataset</span><span class=pl-kos>.</span><span class=pl-c1>state</span> <span class=pl-c1>=</span> <span class=pl-s>&quot;loading&quot;</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
-        <td id="LC66" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
-        <td id="LC67" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>try</span> <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
-        <td id="LC68" class="blob-code blob-code-inner js-file-line">          <span class=pl-k>const</span> <span class=pl-s1>response</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-en>fetch</span><span class=pl-kos>(</span><span class=pl-c1>WORKER_URL</span><span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
-        <td id="LC69" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>method</span>: <span class=pl-s>&quot;POST&quot;</span><span class=pl-kos>,</span></td>
-      </tr>
-      <tr>
-        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
-        <td id="LC70" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>mode</span>: <span class=pl-s>&quot;cors&quot;</span><span class=pl-kos>,</span></td>
-      </tr>
-      <tr>
-        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
-        <td id="LC71" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>headers</span>: <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
-        <td id="LC72" class="blob-code blob-code-inner js-file-line">              <span class=pl-s>&quot;content-type&quot;</span>: <span class=pl-s>&quot;application/json&quot;</span></td>
-      </tr>
-      <tr>
-        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
-        <td id="LC73" class="blob-code blob-code-inner js-file-line">            <span class=pl-kos>}</span><span class=pl-kos>,</span></td>
-      </tr>
-      <tr>
-        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
-        <td id="LC74" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>body</span>: <span class=pl-c1>JSON</span><span class=pl-kos>.</span><span class=pl-en>stringify</span><span class=pl-kos>(</span><span class=pl-kos>{</span> code <span class=pl-kos>}</span><span class=pl-kos>)</span></td>
-      </tr>
-      <tr>
-        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
-        <td id="LC75" class="blob-code blob-code-inner js-file-line">          <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
-        <td id="LC76" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
-        <td id="LC77" class="blob-code blob-code-inner js-file-line">          <span class=pl-k>const</span> <span class=pl-s1>result</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-s1>response</span><span class=pl-kos>.</span><span class=pl-en>json</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
-        <td id="LC78" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
-        <td id="LC79" class="blob-code blob-code-inner js-file-line">          <span class=pl-k>if</span> <span class=pl-kos>(</span><span class=pl-s1>result</span><span class=pl-kos>.</span><span class=pl-c1>error</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
-        <td id="LC80" class="blob-code blob-code-inner js-file-line">            <span class=pl-k>return</span> <span class=pl-en>alert</span><span class=pl-kos>(</span><span class=pl-c1>JSON</span><span class=pl-kos>.</span><span class=pl-en>stringify</span><span class=pl-kos>(</span><span class=pl-s1>result</span><span class=pl-kos>,</span> null<span class=pl-kos>,</span> <span class=pl-c1>2</span><span class=pl-kos>)</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
-        <td id="LC81" class="blob-code blob-code-inner js-file-line">          <span class=pl-kos>}</span></td>
-      </tr>
-      <tr>
-        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
-        <td id="LC82" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
-        <td id="LC83" class="blob-code blob-code-inner js-file-line">          <span class=pl-c>// token can now be used to send authenticated requests against https://api.github.com</span></td>
-      </tr>
-      <tr>
-        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
-        <td id="LC84" class="blob-code blob-code-inner js-file-line">          <span class=pl-k>const</span> <span class=pl-s1>getUserResponse</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-en>fetch</span><span class=pl-kos>(</span><span class=pl-s>&quot;https://api.github.com/user&quot;</span><span class=pl-kos>,</span> <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
-        <td id="LC85" class="blob-code blob-code-inner js-file-line">            <span class=pl-c1>headers</span>: <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
-        <td id="LC86" class="blob-code blob-code-inner js-file-line">              <span class=pl-c1>accept</span>: <span class=pl-s>&quot;application/vnd.github.v3+json&quot;</span><span class=pl-kos>,</span></td>
-      </tr>
-      <tr>
-        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
-        <td id="LC87" class="blob-code blob-code-inner js-file-line">              <span class=pl-c1>authorization</span>: <span class=pl-s>`token <span class=pl-s1><span class=pl-kos>${</span><span class=pl-s1>result</span><span class=pl-kos>.</span><span class=pl-c1>token</span><span class=pl-kos>}</span></span>`</span></td>
-      </tr>
-      <tr>
-        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
-        <td id="LC88" class="blob-code blob-code-inner js-file-line">            <span class=pl-kos>}</span></td>
-      </tr>
-      <tr>
-        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
-        <td id="LC89" class="blob-code blob-code-inner js-file-line">          <span class=pl-kos>}</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
-        <td id="LC90" class="blob-code blob-code-inner js-file-line">          <span class=pl-k>const</span> <span class=pl-kos>{</span> login <span class=pl-kos>}</span> <span class=pl-c1>=</span> <span class=pl-k>await</span> <span class=pl-s1>getUserResponse</span><span class=pl-kos>.</span><span class=pl-en>json</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
-        <td id="LC91" class="blob-code blob-code-inner js-file-line">          <span class=pl-s1>$login</span><span class=pl-kos>.</span><span class=pl-c1>textContent</span> <span class=pl-c1>=</span> <span class=pl-s1>login</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
-        <td id="LC92" class="blob-code blob-code-inner js-file-line">          <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-c1>body</span><span class=pl-kos>.</span><span class=pl-c1>dataset</span><span class=pl-kos>.</span><span class=pl-c1>state</span> <span class=pl-c1>=</span> <span class=pl-s>&quot;signed-in&quot;</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
-        <td id="LC93" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span> <span class=pl-k>catch</span> <span class=pl-kos>(</span><span class=pl-s1>error</span><span class=pl-kos>)</span> <span class=pl-kos>{</span></td>
-      </tr>
-      <tr>
-        <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
-        <td id="LC94" class="blob-code blob-code-inner js-file-line">          <span class=pl-en>alert</span><span class=pl-kos>(</span><span class=pl-s1>error</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
-        <td id="LC95" class="blob-code blob-code-inner js-file-line">          <span class=pl-s1>location</span><span class=pl-kos>.</span><span class=pl-en>reload</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
-        <td id="LC96" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>}</span></td>
-      </tr>
-      <tr>
-        <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
-        <td id="LC97" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>}</span></td>
-      </tr>
-      <tr>
-        <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
-        <td id="LC98" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
-        <td id="LC99" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
-        <td id="LC100" class="blob-code blob-code-inner js-file-line">    <span class=pl-c>&lt;!-- highlight source code of this page using prism --&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
-        <td id="LC101" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>h2</span><span class=pl-kos>&gt;</span>Source code of this page<span class=pl-kos>&lt;/</span><span class=pl-ent>h2</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
-        <td id="LC102" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>code</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>language-html</span>&quot; <span class=pl-c1>id</span>=&quot;<span class=pl-s>sourcecode</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
-        <td id="LC103" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
-        <td id="LC104" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>link</span></td>
-      </tr>
-      <tr>
-        <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
-        <td id="LC105" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>rel</span>=&quot;<span class=pl-s>stylesheet</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
-        <td id="LC106" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>href</span>=&quot;<span class=pl-s>https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
-        <td id="LC107" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>integrity</span>=&quot;<span class=pl-s>sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
-        <td id="LC108" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>crossorigin</span>=&quot;<span class=pl-s>anonymous</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
-        <td id="LC109" class="blob-code blob-code-inner js-file-line">    /&gt;</td>
-      </tr>
-      <tr>
-        <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
-        <td id="LC110" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>script</span></td>
-      </tr>
-      <tr>
-        <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
-        <td id="LC111" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>src</span>=&quot;<span class=pl-s>https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
-        <td id="LC112" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>integrity</span>=&quot;<span class=pl-s>sha256-Y+Budm2wBEjYjbH0qcJRmLuRBFpXd0VKxl6XhdS4hgA=</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
-        <td id="LC113" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>crossorigin</span>=&quot;<span class=pl-s>anonymous</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
-        <td id="LC114" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
-        <td id="LC115" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>script</span></td>
-      </tr>
-      <tr>
-        <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
-        <td id="LC116" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>src</span>=&quot;<span class=pl-s>https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
-        <td id="LC117" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>integrity</span>=&quot;<span class=pl-s>sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
-        <td id="LC118" class="blob-code blob-code-inner js-file-line">      <span class=pl-c1>crossorigin</span>=&quot;<span class=pl-s>anonymous</span>&quot;</td>
-      </tr>
-      <tr>
-        <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
-        <td id="LC119" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
-        <td id="LC120" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L121" class="blob-num js-line-number" data-line-number="121"></td>
-        <td id="LC121" class="blob-code blob-code-inner js-file-line">      <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>querySelector</span><span class=pl-kos>(</span><span class=pl-s>&quot;#sourcecode&quot;</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-c1>textContent</span> <span class=pl-c1>=</span></td>
-      </tr>
-      <tr>
-        <td id="L122" class="blob-num js-line-number" data-line-number="122"></td>
-        <td id="LC122" class="blob-code blob-code-inner js-file-line">        <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-c1>body</span><span class=pl-kos>.</span><span class=pl-c1>parentElement</span><span class=pl-kos>.</span><span class=pl-c1>outerHTML</span><span class=pl-kos>;</span></td>
-      </tr>
-      <tr>
-        <td id="L123" class="blob-num js-line-number" data-line-number="123"></td>
-        <td id="LC123" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L124" class="blob-num js-line-number" data-line-number="124"></td>
-        <td id="LC124" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>body</span><span class=pl-kos>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L125" class="blob-num js-line-number" data-line-number="125"></td>
-        <td id="LC125" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>html</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>}</span></td>
       </tr>
 </table>
 
@@ -1645,7 +1445,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/brentrealbt/krakerjak.io/blame/8c16ad39bc39011cfb02d8f006015b4b986d8fee/index.html">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/brentrealbt/krakerjak.io/blame/8c16ad39bc39011cfb02d8f006015b4b986d8fee/github-oauth-login.js">View git blame</a></li>
       </ul>
     </details-menu>
   </details>
@@ -1664,6 +1464,20 @@
         <button type="submit" class="btn" data-close-dialog>Go</button>
 </form>    </details-dialog>
   </details>
+
+    <div class="Popover anim-scale-in js-tagsearch-popover"
+     hidden
+     data-tagsearch-url="/brentrealbt/krakerjak.io/find-symbols"
+     data-tagsearch-ref="master"
+     data-tagsearch-path="github-oauth-login.js"
+     data-tagsearch-lang="JavaScript"
+     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:244273202,&quot;ref&quot;:&quot;master&quot;,&quot;language&quot;:&quot;JavaScript&quot;,&quot;originating_url&quot;:&quot;https://github.com/brentrealbt/krakerjak.io/blob/master/github-oauth-login.js&quot;,&quot;user_id&quot;:8030678}}"
+     data-hydro-click-hmac="f647f5d52a09e8540c22b4c73a5700c66dc306edd79f9a7c10c9b678ee14e4e4">
+  <div class="Popover-message Popover-message--large Popover-message--top-left TagsearchPopover mt-1 mb-4 mx-auto Box box-shadow-large">
+    <div class="TagsearchPopover-content js-tagsearch-popover-content overflow-auto" style="will-change:transform;">
+    </div>
+  </div>
+</div>
 
 
 
